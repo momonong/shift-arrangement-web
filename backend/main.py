@@ -1,4 +1,4 @@
-from fastapi import FastAPI, File, UploadFile
+from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import StreamingResponse
 from enum import Enum
 from pydantic import BaseModel
@@ -43,6 +43,54 @@ def read_item() -> Any:
         {'name': 'portal gun', 'price': 50.5},
         {'name': 'plog', 'price': 30.5},
     ]
+
+class OperatorEnum(str, Enum):
+    add = 'add'
+    sub = 'sub'
+    mul = 'mul'
+    div = 'div'
+
+class CalculateRequest(BaseModel):
+    operator: OperatorEnum
+    a: int
+    b: int
+
+class CalculateResponse(BaseModel):
+    result: int
+
+@app.post('/math_get', response_model=CalculateResponse)
+def calculate_post(request: CalculateRequest):
+    operator = request.operator
+    a = request.a
+    b = request.b
+    match operator:
+        case OperatorEnum.add:
+            return {'result': a+b}
+        case OperatorEnum.sub:
+            return {'result': a-b}
+        case OperatorEnum.mul:
+            return {'result': a*b}
+        case OperatorEnum.div:
+            return {'result': a/b}
+        case _:
+            raise HTTPException(status_code=400, detail='Invalid operator')
+        
+@app.get('/math_post', response_model=CalculateResponse)
+def calculate_get(request_op: OperatorEnum, a: int, b: int):
+    operator = request_op
+    a = a
+    b = b
+    match operator:
+        case OperatorEnum.add:
+            return {'result': a+b}
+        case OperatorEnum.sub:
+            return {'result': a-b}
+        case OperatorEnum.mul:
+            return {'result': a*b}
+        case OperatorEnum.div:
+            return {'result': a/b}
+        case _:
+            raise HTTPException(status_code=400, detail='Invalid operator')
 
 class GoogleForm(BaseModel):
     first_name: str
