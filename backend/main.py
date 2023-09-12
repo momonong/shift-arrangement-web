@@ -1,5 +1,6 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException
 from fastapi.responses import StreamingResponse
+from fastapi.middleware.cors import CORSMiddleware
 from enum import Enum
 from pydantic import BaseModel
 from typing import Any, Annotated
@@ -8,6 +9,14 @@ from io import BytesIO
 import pandas as pd
 
 app = FastAPI()
+
+# 允許所有源的跨域請求
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/")
 def root():
@@ -58,7 +67,7 @@ class CalculateRequest(BaseModel):
 class CalculateResponse(BaseModel):
     result: int
 
-@app.post('/math_get', response_model=CalculateResponse)
+@app.post('/math_post', response_model=CalculateResponse)
 def calculate_post(request: CalculateRequest):
     operator = request.operator
     a = request.a
@@ -75,9 +84,9 @@ def calculate_post(request: CalculateRequest):
         case _:
             raise HTTPException(status_code=400, detail='Invalid operator')
         
-@app.get('/math_post', response_model=CalculateResponse)
-def calculate_get(request_op: OperatorEnum, a: int, b: int):
-    operator = request_op
+@app.get('/math_get', response_model=CalculateResponse)
+def calculate_get(operator: OperatorEnum, a: int, b: int):
+    operator = operator
     a = a
     b = b
     match operator:
