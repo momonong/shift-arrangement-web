@@ -5,15 +5,15 @@ export const calculate_get = async (operator: string, a: number, b: number) => {
   return result;
 };
 
-const calculate_post = async () => {
-  const response = await fetch('http://127.0.0.1:8000/math_post',{
-    method: 'POST', 
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({operator: 'add', a: 1, b: 2}),
-  });
-  const {result} = await response.json();
-  console.log(result);
-}
-calculate_post();
+// const calculate_post = async () => {
+//   const response = await fetch('http://127.0.0.1:8000/math_post',{
+//     method: 'POST', 
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify({operator: 'add', a: 1, b: 2}),
+//   });
+//   const {result} = await response.json();
+//   return result;
+// }
+// export default calculate_post();
