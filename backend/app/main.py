@@ -155,8 +155,44 @@ def bard_endpoint(request: BardRequest):
 class ShiftRequest(BaseModel):
     file: UploadFile
 
+# @app.post('/shift')
+# # def shift_endpoint(file: Annotated[bytes, File()]):
+# #     df = pd.read_csv(BytesIO(file))
+# #     name = df['112'][2]
+# #     return {'message': f'csv file succesfully uploaded, {name}'}
+# async def shift_endpoint(file: Annotated[UploadFile, File()]):
+#     # 讀取檔案內容
+#     contents = await file.read()
+
+#     # 檢查檔案擴展名
+#     if file.filename.endswith('.xlsx'):
+#         df = pd.read_excel(BytesIO(contents))
+#     elif file.filename.endswith('.csv'):
+#         df = pd.read_csv(BytesIO(contents))
+#     else:
+#         return {'message': 'Unsupported file format'}
+
+#     # 假設您要從特定列和行讀取數據
+#     name = df['112'][2]
+#     return {'message': f'File successfully uploaded, {name}'}
+
 @app.post('/shift')
-def shift_endpoint(file: Annotated[bytes, File()]):
-    df = pd.read_csv(BytesIO(file))
-    name = df['112'][2]
-    return {'message': f'csv file succesfully uploaded, {name}'}
+async def shift_endpoint(file: Annotated[UploadFile, File()]):
+    contents = await file.read()
+
+    if file.filename.endswith('.xlsx'):
+        df = pd.read_excel(BytesIO(contents))
+    elif file.filename.endswith('.csv'):
+        df = pd.read_csv(BytesIO(contents))
+    else:
+        return {'message': 'Unsupported file format'}
+
+    # 打印列名稱以進行調試
+    print(df.columns)
+
+    # 根據檔案類型選擇列名稱
+    column_name = '112' if '112' in df.columns else df.columns[0]  # 假設 '112' 或第一列
+
+    # 讀取數據
+    name = df[column_name][2]
+    return {'message': f'File successfully uploaded, {name}'}
