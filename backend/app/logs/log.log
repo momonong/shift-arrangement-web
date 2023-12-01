@@ -1,0 +1,101 @@
+2023-12-01 10:54:14,208 - INFO - Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-12-01 10:54:14,208 - INFO - NumExpr defaulting to 8 threads.
+2023-12-01 11:57:18,253 - INFO - Note: NumExpr detected 16 cores but "NUMEXPR_MAX_THREADS" not set, so enforcing safe limit of 8.
+2023-12-01 11:57:18,253 - INFO - NumExpr defaulting to 8 threads.
+2023-12-01 11:57:18,376 - INFO - pikepdf C++ to Python logger bridge initialized
+2023-12-01 11:57:24,297 - INFO - Processing entire page OCR with tesseract...
+2023-12-01 12:00:48,300 - INFO - Processing entire page OCR with tesseract...
+2023-12-01 12:00:49,756 - INFO - Processing entire page OCR with tesseract...
+2023-12-01 12:00:52,252 - INFO - Processing entire page OCR with tesseract...
+2023-12-01 12:00:54,402 - INFO - Processing entire page OCR with tesseract...
+2023-12-01 12:00:56,296 - INFO - Processing entire page OCR with tesseract...
+2023-12-01 12:01:02,375 - INFO - Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2023-12-01 12:01:40,249 - INFO - Processing entire page OCR with tesseract...
+2023-12-01 12:01:41,670 - INFO - Processing entire page OCR with tesseract...
+2023-12-01 12:01:44,190 - INFO - Processing entire page OCR with tesseract...
+2023-12-01 12:01:46,345 - INFO - Processing entire page OCR with tesseract...
+2023-12-01 12:01:48,231 - INFO - Processing entire page OCR with tesseract...
+2023-12-01 12:01:55,749 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2023-12-01 12:02:27,627 - INFO - Start answering based on prompt: 幫我條列出我要排班的注意要點.
+2023-12-01 12:18:48,579 - INFO - Start answering based on prompt: 幫我條列出我要排班的注意要點.
+2023-12-01 12:19:55,662 - INFO - Start answering based on prompt: 幫我條列出我要排班的注意要點.
+2023-12-01 12:20:08,885 - INFO - Start answering based on prompt: 幫我條列出我要排班的注意要點.
+2023-12-01 12:20:08,985 - INFO - The top 4 chunks are considered to answer the user's query.
+2023-12-01 12:20:10,986 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2023-12-01 12:20:17,651 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2023-12-01 12:20:17,657 - INFO - The returned answer is: 
+Revised Scheduling Rules:
+
+• Shift Length: Employees must work a minimum of 8 hours and a maximum of 45 hours per week.
+
+• Shift Start Time: Employees must start their shift no earlier than 4am and no later than 8pm.
+
+• Shift Breaks: Employees must take a break of at least 30 minutes after working for 6 hours.
+
+• Overtime: Employees must not work more than 10 hours of overtime per week.
+
+• Shift Changes: Employees must be given at least 24 hours notice before any shift changes.
+
+• Shift Swaps: Employees must be given at least 48 hours notice before any shift swaps.
+
+• Shift Cancellations: Employees must be given at least 48 hours notice before any shift cancellations.
+
+• Shift Assignments: Employees must be given at least 7 days notice before any shift assignments.
+
+• Shift Rotations: Employees must be given at least 14 days notice before any shift rotations.
+
+• Shift Scheduling: Employees must be given at least 21 days notice before any shift scheduling.
+
+• Shift Overlaps: Employees must not overlap shifts with other employees.
+
+• Shift Conflicts: Employees must not be assigned shifts that conflict with their other commitments.
+
+Is there anything else I can help you with?
+2023-12-01 12:20:17,659 - INFO - Answering module over.
+2023-12-01 12:22:52,229 - INFO - Start answering based on prompt: 幫我條列出我要排班的注意要點.
+2023-12-01 12:22:52,325 - INFO - The top 4 chunks are considered to answer the user's query.
+2023-12-01 12:22:52,774 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2023-12-01 12:23:00,061 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2023-12-01 12:23:00,067 - INFO - The returned answer is: 
+根據您的問題，我建議您按照以下規則排班：
+
+1. 保持安全：確保所有護士都有足夠的休息時間，並確保每個班次都有足夠的護士參與。
+
+2. 確保每個班次都有足夠的護士參與：確保每個班次都有足夠的護士參與，以確保每個班次都有足夠的護士參與。
+
+3. 確保每個班次都有足夠的護士參與：確
+2023-12-01 12:23:00,070 - INFO - Answering module over.
+2023-12-01 12:25:52,046 - INFO - Start answering based on prompt: 幫我條列出醫護排班的注意要點.
+2023-12-01 12:25:52,142 - INFO - The top 4 chunks are considered to answer the user's query.
+2023-12-01 12:25:52,483 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2023-12-01 12:25:59,239 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2023-12-01 12:25:59,240 - INFO - The returned answer is: 
+醫護排班的注意要點：
+
+1. 確保排班時間表符合法規要求，並確保每個醫護人員都有足夠的休息時間。
+
+2. 確保每個醫護人員都有足夠的時間來完成任務，並確保每個醫護人員都有足夠的時間來完成任務。
+
+3. 確保每個醫護人員都有足夠的時間來完成任務，並確保每個醫護人員都有足夠的時間來完成
+2023-12-01 12:25:59,241 - INFO - Answering module over.
+2023-12-01 12:29:32,340 - INFO - Start answering based on prompt: 假設我五個班別都最少人值班，這樣我最少需要多少人同時值班.
+2023-12-01 12:29:32,433 - INFO - The top 4 chunks are considered to answer the user's query.
+2023-12-01 12:29:34,464 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2023-12-01 12:29:39,264 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2023-12-01 12:29:39,270 - INFO - The returned answer is: 
+根據您提供的排班規則，您最少需要10名員工同時值班，分別為：A班2名、B班2名、C班2名、D班2名和E班2名。如果您需要更多的員工值班，可以將每個班次的人數增加，以滿足您的需求。
+2023-12-01 12:29:39,271 - INFO - Answering module over.
+2023-12-01 12:30:51,630 - INFO - Start answering based on prompt: 有一個人很重要，我想要讓他連續工作16個小時，這樣我要如何安排.
+2023-12-01 12:30:51,722 - INFO - The top 4 chunks are considered to answer the user's query.
+2023-12-01 12:30:52,101 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2023-12-01 12:30:57,429 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2023-12-01 12:30:57,436 - INFO - The returned answer is: 
+根據您的要求，我建議您可以將ABCDE五個班次安排為：A班：8小時，B班：4小時，C班：2小時，D班：2小時，E班：0小時。這樣，該員工就可以連續工作16小時，而不會有任何時間上的間斷。
+2023-12-01 12:30:57,437 - INFO - Answering module over.
+2023-12-01 12:31:53,050 - INFO - Start answering based on prompt: 我可以把這個人放在同一個班別裡面連續工作16小時嗎.
+2023-12-01 12:31:53,145 - INFO - The top 4 chunks are considered to answer the user's query.
+2023-12-01 12:31:53,543 - INFO - HTTP Request: POST https://api.openai.com/v1/embeddings "HTTP/1.1 200 OK"
+2023-12-01 12:31:59,635 - INFO - HTTP Request: POST https://api.openai.com/v1/completions "HTTP/1.1 200 OK"
+2023-12-01 12:31:59,640 - INFO - The returned answer is: 
+不，根據當前的排班規則，不可以把這個人放在同一個班別裡面連續工作16小時。每個班次的時間限制為8小時，因此無法滿足您的需求。建議您可以考慮調整排班規則，例如增加班次或延長每個班次的時間限制，以滿足您的需求。
+2023-12-01 12:31:59,642 - INFO - Answering module over.
